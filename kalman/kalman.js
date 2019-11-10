@@ -1,4 +1,4 @@
-var KalmanFilter = require('kalmanjs').default;
+var KalmanFilter = require('kalmanjs')
 
 module.exports = function(RED) {
     function KalmanFilterType(config) {
