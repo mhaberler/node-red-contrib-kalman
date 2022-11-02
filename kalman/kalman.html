@@ -1,15 +1,15 @@
 <script type="text/javascript">
-    RED.nodes.registerType('kalman-filter',{
+    RED.nodes.registerType('kalman-filter', {
         category: 'function',
         color: '#a6bbcf',
         defaults: {
-            r: {value:0.01},
-            q: {value:3}
+            r: { value: 0.01 },
+            q: { value: 3 }
         },
-        inputs:1,
-        outputs:1,
+        inputs: 1,
+        outputs: 1,
         icon: "file.png",
-        label: function() {
+        label: function () {
             return this.name || 'kalman-filter';
         }
     });
@@ -28,4 +28,6 @@
 
 <script type="text/x-red" data-help-name="kalman-filter">
     <p>A simple node that apply kalman filter to the message payloads</p>
+    The <b>R</b> and <b>Q</b> values can be set at runtime by
+     <b>msg.processNoise</b> and <b>msg.measurementNoise</b> values.
 </script>
